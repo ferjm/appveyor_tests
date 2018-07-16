@@ -3,3 +3,6 @@ install:
   - ps: (new-object net.webclient).DownloadFile('https://gstreamer.freedesktop.org/data/pkg/windows/1.14.1/gstreamer-1.0-devel-x86_64-1.14.1.msi', 'gstreamer-1.0-devel-x86_64-1.14.1.msi')
   - ps: msiexec /i gstreamer-1.0-devel-x86_64-1.14.1.msi /quiet /qn /norestart /log install.log
   - dir C:\Program Files
+  - dir C:\Program/ Files
+  - dir C:\Program /Files
+  - tree C:\
