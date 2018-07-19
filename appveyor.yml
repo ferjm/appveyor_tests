@@ -2,7 +2,7 @@ install:
   - choco install pkgconfiglite 
   - appveyor-retry appveyor DownloadFile https://gstreamer.freedesktop.org/data/pkg/windows/1.14.1/gstreamer-1.0-devel-x86_64-1.14.1.msi
   - appveyor-retry appveyor DownloadFile https://gstreamer.freedesktop.org/data/pkg/windows/1.14.1/gstreamer-1.0-x86_64-1.14.1.msi
-  - gstreamer-1.0-x86_64-1.14.1.msi
-  - gstreamer-1.0-devel-x86_64-1.14.1.msi
+  - msiexec /i gstreamer-1.0-x86_64-1.14.1.msi
+  - msiexec /i gstreamer-1.0-devel-x86_64-1.14.1.msi
   - cd/
   - dir /b/s *gstreamer*
