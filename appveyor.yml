@@ -1,5 +1,8 @@
 install:
+  - appveyor-retry appveyor DownloadFile https://gstreamer.freedesktop.org/data/pkg/windows/1.14.1/gstreamer-1.0-devel-x86_64-1.14.1.msi
   - appveyor-retry appveyor DownloadFile https://gstreamer.freedesktop.org/data/pkg/windows/1.14.1/gstreamer-1.0-x86_64-1.14.1.msi
+  - msiexec /i gstreamer-1.0-devel-x86_64-1.14.1.msi /quiet /qn /norestart /log install-devel.log
   - msiexec /i gstreamer-1.0-x86_64-1.14.1.msi /quiet /qn /norestart /log install.log
+  - type install-devel.log
   - type install.log
   - dir C:\gstreamer\
